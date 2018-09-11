@@ -1,4 +1,4 @@
-package com.agenda.agenda;
+package com.agenda;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
