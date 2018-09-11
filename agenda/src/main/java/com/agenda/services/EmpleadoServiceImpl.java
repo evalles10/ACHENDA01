@@ -17,8 +17,8 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 	@Autowired
 	private EmpleadoService empleadoService;
 	
+
 	public void ListarEmpleados(){
-		
 	}
 	
 	public EmpleadoServiceImpl(EmpleadoService empleadoService) {
@@ -31,7 +31,6 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 		
 		return empleadoService.list();
 	}
-
 	@Override
 	public Empleado get(int idEmpleado) {
 		return empleadoService.get(idEmpleado);
