@@ -1,4 +1,4 @@
-package com.agenda.agenda.model;
+package com.agenda.model;
 
 import java.io.Serializable;
 import java.sql.Date;
