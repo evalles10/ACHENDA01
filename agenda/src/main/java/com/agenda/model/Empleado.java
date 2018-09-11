@@ -1,5 +1,5 @@
 package com.agenda.model;
-import com.agenda.model.Departamento;
+import com.agenda.model.Departamentos;
 import java.io.Serializable;
 import java.sql.Date;
 import java.sql.Timestamp;
@@ -11,12 +11,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 @Entity
 @Table(name="EMPLEADO")
 public class Empleado implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idEmpleados;
@@ -24,13 +29,13 @@ public class Empleado implements Serializable {
 	private Integer salario;
 	private Timestamp fechaAlta;
 	
-	@OneToOne(mappedBy = "idDepartamento",cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "idDepartamento",cascade = CascadeType.ALL)
 	@JoinColumn(name = "iDepartamento")
-	private Departamento departamento;
+	private Departamentos departamentos;
 	
-	@OneToOne(mappedBy = "idCategoria",cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "idCategoria",cascade = CascadeType.ALL)
 	@JoinColumn(name = "idCategoria")
-	private Categoria categoria;
+	private Categorias categorias;
 	
 
 	public Empleado() {

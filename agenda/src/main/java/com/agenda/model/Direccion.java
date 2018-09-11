@@ -8,7 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.agenda.model.Persona;
@@ -26,7 +26,7 @@ public class Direccion implements Serializable {
 	private String localidad;
 	private String provincia;
 
-	@OneToOne(mappedBy = "idPersona", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "idPersona", cascade = CascadeType.ALL)
 	@JoinColumn(name = "idPersona")
 	private Persona persona;
 
