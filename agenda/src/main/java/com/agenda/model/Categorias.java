@@ -19,6 +19,10 @@ public class Categorias implements Serializable{
 	private String nombre;
 	private String descripcion;
 	
+	@OneToMany(mappedBy = "idEmpleados",cascade = CascadeType.ALL)
+	@JoinColumn(name = "idEmpleados")
+	private Empleado empleado;
+	
 	//GET Y SET
 	public int getIdcategorias() {
 		return idcategorias;
