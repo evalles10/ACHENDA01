@@ -9,7 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="es">
 
 <head>
 	<title>ACHENDA</title>
