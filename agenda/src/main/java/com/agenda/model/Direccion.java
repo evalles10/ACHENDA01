@@ -26,10 +26,10 @@ public class Direccion implements Serializable {
 	private String localidad;
 	private String provincia;
 
-	@OneToMany(mappedBy = "idPersona", cascade = CascadeType.ALL)
-	@JoinColumn(name = "idPersona")
-	private Persona persona;
-
+	
+	
+	
+	
 	public Direccion() {
 		super();
 	}

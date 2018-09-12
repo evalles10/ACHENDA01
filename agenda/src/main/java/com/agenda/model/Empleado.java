@@ -2,6 +2,8 @@ package com.agenda.model;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -30,12 +32,12 @@ public class Empleado implements Serializable {
 	@JoinColumn(name = "idempleados", referencedColumnName = "idEmpleado")
 	private Persona persona;
 
-	@ManyToOne
-	@JoinColumn(name = "idCategoria", referencedColumnName = "idcategorias")
+	@ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "idCategoria")
 	private Categorias categoria;
 
-	@ManyToOne
-	@JoinColumn(name = "idDepartamento", referencedColumnName = "iddepartamento")
+	@ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "idDepartamento")
 	private Departamentos departamento;
 
 	public Empleado() {
