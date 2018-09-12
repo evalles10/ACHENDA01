@@ -10,8 +10,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
 @Entity
-@Table(name="EMPLEADOS")
+@Table(name = "EMPLEADOS")
 public class Empleado implements Serializable {
 
 	/**
@@ -24,19 +25,17 @@ public class Empleado implements Serializable {
 	private Integer codEmpleado;
 	private Integer salario;
 	private Timestamp fechaAlta;
-	private Integer idCategoria;
 
-	
 	@OneToOne
-	@JoinColumn(name="idempleados", referencedColumnName="idEmpleado")
+	@JoinColumn(name = "idempleados", referencedColumnName = "idEmpleado")
 	private Persona persona;
-	
+
 	@ManyToOne
-	@JoinColumn(name="idCategoria", referencedColumnName="idcategorias")
+	@JoinColumn(name = "idCategoria", referencedColumnName = "idcategorias")
 	private Categorias categoria;
 
 	@ManyToOne
-	@JoinColumn(name="idDepartamento", referencedColumnName="iddepartamento")
+	@JoinColumn(name = "idDepartamento", referencedColumnName = "iddepartamento")
 	private Departamentos departamento;
 
 	public Empleado() {
@@ -49,10 +48,34 @@ public class Empleado implements Serializable {
 		this.codEmpleado = codEmpleado;
 		this.salario = salario;
 		this.fechaAlta = fechaAlta;
-	
+
 	}
 
 	// GET Y SET
+	public Categorias getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categorias categoria) {
+		this.categoria = categoria;
+	}
+
+	public Departamentos getDepartamento() {
+		return departamento;
+	}
+
+	public void setDepartamento(Departamentos departamento) {
+		this.departamento = departamento;
+	}
+
+	public Persona getPersona() {
+		return persona;
+	}
+
+	public void setPersona(Persona persona) {
+		this.persona = persona;
+	}
+
 	public Integer getIdEmpleado() {
 		return idEmpleado;
 	}
@@ -60,15 +83,6 @@ public class Empleado implements Serializable {
 	public void setIdEmpleado(Integer idEmpleado) {
 		this.idEmpleado = idEmpleado;
 	}
-
-	public Integer getIdCategoria() {
-		return idCategoria;
-	}
-
-	public void setIdCategoria(Integer idCategoria) {
-		this.idCategoria = idCategoria;
-	}
-	
 
 	public Integer getCodEmpleado() {
 		return codEmpleado;
@@ -99,8 +113,5 @@ public class Empleado implements Serializable {
 		return "Empleado [idEmpleados=" + idEmpleado + ", codEmpleado=" + codEmpleado + ", salario=" + salario
 				+ ", fechaAlta=" + fechaAlta + "]";
 	}
-	
-	
-	
 
 }
