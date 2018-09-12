@@ -1,8 +1,6 @@
 package com.agenda.model;
-
 import java.io.Serializable;
 import java.sql.Timestamp;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,7 +21,7 @@ public class Empleado implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idempleado;
+	private Integer idempleados;
 	private Integer codEmpleado;
 	private Integer salario;
 	private Timestamp fechaAlta;
@@ -44,46 +42,30 @@ public class Empleado implements Serializable {
 		super();
 	}
 
-	public Empleado(Integer idempleados, Integer codEmpleado, Integer salario, Timestamp fechaAlta, Empleado empleado) {
+	
+
+	public Empleado(Integer idempleados, Integer codEmpleado, Integer salario, Timestamp fechaAlta, Persona persona,
+			Categorias categoria, Departamentos departamento) {
 		super();
-		this.idempleado = idempleados;
+		this.idempleados = idempleados;
 		this.codEmpleado = codEmpleado;
 		this.salario = salario;
 		this.fechaAlta = fechaAlta;
-
-	}
-
-	// GET Y SET
-	public Categorias getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(Categorias categoria) {
+		this.persona = persona;
 		this.categoria = categoria;
-	}
-
-	public Departamentos getDepartamento() {
-		return departamento;
-	}
-
-	public void setDepartamento(Departamentos departamento) {
 		this.departamento = departamento;
 	}
 
-	public Persona getPersona() {
-		return persona;
+
+
+	// GET Y SET
+	
+	public Integer getIdempleados() {
+		return idempleados;
 	}
 
-	public void setPersona(Persona persona) {
-		this.persona = persona;
-	}
-
-	public Integer getIdEmpleado() {
-		return idempleado;
-	}
-
-	public void setIdEmpleado(Integer idEmpleado) {
-		this.idempleado = idEmpleado;
+	public void setIdempleados(Integer idempleados) {
+		this.idempleados = idempleados;
 	}
 
 	public Integer getCodEmpleado() {
@@ -110,10 +92,43 @@ public class Empleado implements Serializable {
 		this.fechaAlta = fechaAlta;
 	}
 
-	@Override
-	public String toString() {
-		return "Empleado [idEmpleados=" + idempleado + ", codEmpleado=" + codEmpleado + ", salario=" + salario
-				+ ", fechaAlta=" + fechaAlta + "]";
+	public Persona getPersona() {
+		return persona;
 	}
 
+	public void setPersona(Persona persona) {
+		this.persona = persona;
+	}
+
+	public Categorias getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categorias categoria) {
+		this.categoria = categoria;
+	}
+
+	public Departamentos getDepartamento() {
+		return departamento;
+	}
+	public void setDepartamento(Departamentos departamento) {
+		this.departamento = departamento;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Empleado [idempleados=" + idempleados + ", codEmpleado=" + codEmpleado + ", salario=" + salario
+				+ ", fechaAlta=" + fechaAlta + ", persona=" + persona + ", categoria=" + categoria + ", departamento="
+				+ departamento + "]";
+	}
+
+	
+
+	
 }
