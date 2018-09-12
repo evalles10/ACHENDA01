@@ -1,18 +1,13 @@
 package com.agenda.model;
-import com.agenda.model.Departamentos;
-import java.io.Serializable;
-import java.sql.Date;
-import java.sql.Timestamp;
-import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
+import java.io.Serializable;
+import java.sql.Timestamp;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 @Entity
@@ -35,6 +30,10 @@ public class Empleado implements Serializable {
 	@OneToOne
 	@JoinColumn(name="idempleados", referencedColumnName="idEmpleado")
 	private Persona persona;
+	
+	@ManyToOne
+	@JoinColumn(name="idCategoria", referencedColumnName="idcategorias")
+	private Categorias categoria;
 
 	
 

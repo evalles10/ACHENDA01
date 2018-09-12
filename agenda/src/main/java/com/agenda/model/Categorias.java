@@ -1,7 +1,6 @@
 package com.agenda.model;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.persistence.*;
 
@@ -20,6 +19,10 @@ public class Categorias implements Serializable{
 	private String nombre;
 	private String descripcion;
 	
+	/* ES opcional, porque no tiene porque ser bidireccional a menos que se haga una búsqueda por categoria 
+	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
+	private List<Empleado> empleados;
+	*/
 	
 	
 	//GET Y SET
