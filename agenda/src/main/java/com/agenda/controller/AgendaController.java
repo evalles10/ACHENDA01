@@ -29,8 +29,9 @@ public class AgendaController {
 
 	@RequestMapping("/")
 	public ModelAndView handleRequest() throws Exception {
-		logger.info("--en Listado");
+		logger.info("--en ListadoController");
 		List<Empleado> listEmpleados = empleadoService.list();
+		logger.info("--- "+ listEmpleados);
 		ModelAndView model = new ModelAndView("EmpleadoList");
 		model.addObject("empleadoList", listEmpleados);
 		return model;

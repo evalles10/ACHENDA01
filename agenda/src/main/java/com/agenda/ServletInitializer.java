@@ -1,4 +1,4 @@
-package com.agenda.config;
+package com.agenda;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

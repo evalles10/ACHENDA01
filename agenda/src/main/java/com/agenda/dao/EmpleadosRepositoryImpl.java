@@ -29,7 +29,20 @@ public class EmpleadosRepositoryImpl implements EmpleadoRepositoryCustom{
 		return query.getResultList();
 		
 	}
+	
+	@Override
+	public List<Empleado> getIdPersonas(String empleado){
+		Query query = entityManager.createNativeQuery("SELECT idpersonas FROM personas ");
+		return query.getResultList();
+		
+	}
 
+	@Override
+	public List<Empleado> getIdEmpleado(String empleado){
+		Query query = entityManager.createNativeQuery("SELECT idempleado FROM empleados ");
+		return query.getResultList();
+		
+	}
 
 	 
 }

@@ -3,6 +3,7 @@ import com.agenda.model.Departamentos;
 import java.io.Serializable;
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -15,7 +16,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 @Entity
-@Table(name="EMPLEADO")
+@Table(name="EMPLEADOS")
 public class Empleado implements Serializable {
 
 	/**
@@ -28,10 +29,19 @@ public class Empleado implements Serializable {
 	private Integer codEmpleado;
 	private Integer salario;
 	private Timestamp fechaAlta;
+	private Integer idCategoria;
 	
-	@OneToMany(mappedBy = "idDepartamento",cascade = CascadeType.ALL)
-	@JoinColumn(name = "iDepartamento")
-	private Departamentos departamentos;
+	
+	//@OneToMany(mappedBy = "idDepartamento",cascade = CascadeType.ALL)
+	//@JoinColumn(name = "iDepartamento")
+	//private Departamentos departamentos;
+	
+	@OneToOne()
+	
+	@OneToMany
+	@JoinColumn(name = "idCategoria" , referencedColumnName = "idcategorias")
+	private Empleado empleado;
+
 	
 
 	public Empleado() {
@@ -47,13 +57,23 @@ public class Empleado implements Serializable {
 	
 	}
 
-	public Integer getIdEmpleados() {
+	// GET Y SET
+	public Integer getIdEmpleado() {
 		return idEmpleado;
 	}
 
-	public void setIdEmpleados(Integer idEmpleados) {
-		this.idEmpleado = idEmpleados;
+	public void setIdEmpleado(Integer idEmpleado) {
+		this.idEmpleado = idEmpleado;
 	}
+
+	public Integer getIdCategoria() {
+		return idCategoria;
+	}
+
+	public void setIdCategoria(Integer idCategoria) {
+		this.idCategoria = idCategoria;
+	}
+	
 
 	public Integer getCodEmpleado() {
 		return codEmpleado;

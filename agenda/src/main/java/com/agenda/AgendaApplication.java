@@ -1,4 +1,4 @@
-package com.agenda.config;
+package com.agenda;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
