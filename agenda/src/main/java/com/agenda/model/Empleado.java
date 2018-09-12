@@ -33,10 +33,6 @@ public class Empleado implements Serializable {
 	@JoinColumn(name = "iDepartamento")
 	private Departamentos departamentos;
 	
-	@OneToMany(mappedBy = "idCategoria",cascade = CascadeType.ALL)
-	@JoinColumn(name = "idCategoria")
-	private Categorias categorias;
-	
 
 	public Empleado() {
 		super();
