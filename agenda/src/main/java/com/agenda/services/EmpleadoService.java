@@ -10,5 +10,5 @@ public interface EmpleadoService {
 	public void update(Empleado empleado);
 	public void add(Empleado empleado);
 	public void delete(int idEmpleado);
-	//Tengo el pene negro
+	
 }
