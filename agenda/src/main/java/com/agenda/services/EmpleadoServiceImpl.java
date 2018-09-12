@@ -20,8 +20,8 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 		return empleadoDAO.findAll();
 	}
 	@Override
-	public Empleado get(int idEmpleado){
-		return empleadoDAO.findOne(idEmpleado);
+	public Empleado get(int idempleado){
+		return empleadoDAO.findOne(idempleado);
 		
 	}
 	@Override
@@ -35,8 +35,8 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 	}
 	
 	@Override
-	public void delete(int idEmpleado){
-		empleadoDAO.delete(idEmpleado);
+	public void delete(int idempleado){
+		empleadoDAO.delete(idempleado);
 	}
 	
 }
