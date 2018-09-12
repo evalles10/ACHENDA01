@@ -29,9 +29,9 @@ public class Empleado implements Serializable {
 	private Integer salario;
 	private Timestamp fechaAlta;
 	
-	@OneToMany(mappedBy = "idDepartamento",cascade = CascadeType.ALL)
+	/** @OneToMany(mappedBy = "idDepartamento",cascade = CascadeType.ALL)
 	@JoinColumn(name = "iDepartamento")
-	private Departamentos departamentos;
+	private Departamentos departamentos;**/
 	
 
 	public Empleado() {
