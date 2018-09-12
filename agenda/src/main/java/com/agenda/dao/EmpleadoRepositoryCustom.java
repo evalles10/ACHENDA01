@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface EmpleadoRepositoryCustom {
 
-	List<Empleado>getNombres(String nombres);
+	List<Empleado>getCodEmpleado(String empleados);
 	
 	
 }

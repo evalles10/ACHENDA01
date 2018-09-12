@@ -24,7 +24,7 @@ public class Empleado implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idEmpleados;
+	private Integer idEmpleado;
 	private Integer codEmpleado;
 	private Integer salario;
 	private Timestamp fechaAlta;
@@ -44,7 +44,7 @@ public class Empleado implements Serializable {
 
 	public Empleado(Integer idEmpleados, Integer codEmpleado, Integer salario, Timestamp fechaAlta, Empleado empleado) {
 		super();
-		this.idEmpleados = idEmpleados;
+		this.idEmpleado = idEmpleados;
 		this.codEmpleado = codEmpleado;
 		this.salario = salario;
 		this.fechaAlta = fechaAlta;
@@ -52,11 +52,11 @@ public class Empleado implements Serializable {
 	}
 
 	public Integer getIdEmpleados() {
-		return idEmpleados;
+		return idEmpleado;
 	}
 
 	public void setIdEmpleados(Integer idEmpleados) {
-		this.idEmpleados = idEmpleados;
+		this.idEmpleado = idEmpleados;
 	}
 
 	public Integer getCodEmpleado() {
@@ -85,7 +85,7 @@ public class Empleado implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Empleado [idEmpleados=" + idEmpleados + ", codEmpleado=" + codEmpleado + ", salario=" + salario
+		return "Empleado [idEmpleados=" + idEmpleado + ", codEmpleado=" + codEmpleado + ", salario=" + salario
 				+ ", fechaAlta=" + fechaAlta + "]";
 	}
 	

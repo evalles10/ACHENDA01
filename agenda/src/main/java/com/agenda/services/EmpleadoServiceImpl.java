@@ -1,13 +1,11 @@
 package com.agenda.services;
-
 import java.util.List;
-
 import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import com.agenda.dao.EmpleadosRepository;
 import com.agenda.model.Empleado;
+
 
 
 @Service
@@ -15,42 +13,30 @@ import com.agenda.model.Empleado;
 public class EmpleadoServiceImpl implements EmpleadoService {
 
 	@Autowired
-	private EmpleadoService empleadoService;
+	private EmpleadosRepository empleadoDAO;
 	
-
-	public void ListarEmpleados(){
+	@Override
+	public List<Empleado> list(){
+		return empleadoDAO.findAll();
+	}
+	@Override
+	public Empleado get(int idEmpleado){
+		return empleadoDAO.findOne(idEmpleado);
+		
+	}
+	@Override
+	public void update(Empleado empleado){
+		empleadoDAO.save(empleado);
 	}
 	
-	public EmpleadoServiceImpl(EmpleadoService empleadoService) {
-		super();
-		this.empleadoService = empleadoService;
-	}
-
 	@Override
-	public List<Empleado> list() {
-		
-		return empleadoService.list();
+	public void add(Empleado empleado){
+	empleadoDAO.save(empleado);
 	}
+	
 	@Override
-	public Empleado get(int idEmpleado) {
-		return empleadoService.get(idEmpleado);
+	public void delete(int idEmpleado){
+		empleadoDAO.delete(idEmpleado);
 	}
-
-	@Override
-	public void update(Empleado empleado) {
-		empleadoService.update(empleado);
-		
-	}
-
-	@Override
-	public void add(Empleado empleado) {
-		empleadoService.add(empleado);
-		
-	}
-
-	@Override
-	public void delete(int idEmpleado) {
-		empleadoService.delete(idEmpleado);
-		
-	}
+	
 }
