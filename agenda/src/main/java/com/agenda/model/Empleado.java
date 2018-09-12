@@ -42,8 +42,6 @@ public class Empleado implements Serializable {
 		super();
 	}
 
-	
-
 	public Empleado(Integer idempleados, Integer codEmpleado, Integer salario, Timestamp fechaAlta, Persona persona,
 			Categorias categoria, Departamentos departamento) {
 		super();
@@ -118,8 +116,6 @@ public class Empleado implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-
-
 
 	@Override
 	public String toString() {

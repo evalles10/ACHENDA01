@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 		Empleado findOne(int idEmpleados);
 
-		Empleado delete(int idEmpleado);
+		Empleado delete(int idempleados);
 
 	}
 
