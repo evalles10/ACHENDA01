@@ -35,7 +35,9 @@ public class Empleado implements Serializable {
 	@JoinColumn(name="idCategoria", referencedColumnName="idcategorias")
 	private Categorias categoria;
 
-	
+	@ManyToOne
+	@JoinColumn(name="idDepartamento", referencedColumnName="iddepartamento")
+	private Departamentos departamento;
 
 	public Empleado() {
 		super();
