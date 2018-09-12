@@ -30,17 +30,11 @@ public class Empleado implements Serializable {
 	private Integer salario;
 	private Timestamp fechaAlta;
 	private Integer idCategoria;
+
 	
-	
-	//@OneToMany(mappedBy = "idDepartamento",cascade = CascadeType.ALL)
-	//@JoinColumn(name = "iDepartamento")
-	//private Departamentos departamentos;
-	
-	@OneToOne()
-	
-	@OneToMany
-	@JoinColumn(name = "idCategoria" , referencedColumnName = "idcategorias")
-	private Empleado empleado;
+	@OneToOne
+	@JoinColumn(name="idempleados", referencedColumnName="idEmpleado")
+	private Persona persona;
 
 	
 

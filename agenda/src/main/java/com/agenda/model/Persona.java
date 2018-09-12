@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -31,9 +30,8 @@ public class Persona implements Serializable {
 	private String dni;
 	private Date fechaNacimiento;
 
-	@OneToOne(mappedBy = "idEmpleado", cascade = CascadeType.ALL)
-	@JoinColumn(name = "idEmpleado")
-	private Empleado empleado;
+	@OneToOne(mappedBy = "persona", cascade = CascadeType.ALL)
+    private Empleado empleado;
 
 	public Persona() {
 		super();
