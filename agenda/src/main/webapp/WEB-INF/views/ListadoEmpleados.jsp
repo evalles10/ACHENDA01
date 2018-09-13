@@ -5,9 +5,11 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@page import="com.agenda.model.Empleado"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ page import="java.util.*"%>
+<%@ taglib prefix="c" uri ="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -40,12 +42,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</h1>
 			</div>
 			
-			<c:forEach var="empleado" items="${empleado}">
-
+			
+			
+			
             <div class="w3ls-container   text-center">
                 <div class="w3l-content">
+                
+                <c:forEach var="empleado" items="${empleado}">
+                
                     <div class="right-grid">
-                        <p>In the mean time connect with us with the information below</p>
+                        <p>${empleado.idempleados}</p>
                         <div class="footer-grids">
                             <p>0926k 4th block building,king Avenue, </p>
                             <p class="my-2">New York City,USA</p>
@@ -64,7 +70,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ul>
                         </div>
                     </div>
-                    </c:forEach>
+                </c:forEach>
+                </div>
+            </div>
 			
 			<div class="footer">
 				<p> &copy; 2018 Company Coming soon . All Rights Reserved.Design by
