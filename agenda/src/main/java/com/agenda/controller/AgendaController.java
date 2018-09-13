@@ -2,6 +2,7 @@ package com.agenda.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -27,12 +28,12 @@ public class AgendaController {
 	private static final Logger logger = LoggerFactory.getLogger(AgendaController.class);
 	
 
-	@RequestMapping("/")
+	@GetMapping("/")
 	public ModelAndView handleRequest() throws Exception {
 		logger.info("--en ListadoController");
 		List<Empleado> listEmpleados = empleadoService.list();
 		logger.info("--- "+ listEmpleados);
-		ModelAndView model = new ModelAndView("EmpleadoList");
+		ModelAndView model = new ModelAndView("ListadoEmpleados");
 		model.addObject("empleadoList", listEmpleados);
 		return model;
 	}
@@ -40,7 +41,7 @@ public class AgendaController {
 	@RequestMapping(value = "/new", method = RequestMethod.GET)
 	public ModelAndView newEmpleado() {
 		logger.info("-- en NEW");
-		ModelAndView model = new ModelAndView("EmpleadoForm");
+		ModelAndView model = new ModelAndView("ListadoEmpleados");
 		model.addObject("empleado", new Empleado());
 		return model;		
 	}

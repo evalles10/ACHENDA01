@@ -3,9 +3,7 @@
   <display-name>agenda</display-name>
 
   <welcome-file-list>
-  	<welcome-file>ListadoEmpleados</welcome-file>
-  	<welcome-file>/ListadoEmpleados</welcome-file>
-  	<welcome-file>\ListadoEmpleados</welcome-file>
+  	<welcome-file>ListadoEmpleados.jsp</welcome-file>
   </welcome-file-list>
   
 </web-app>
