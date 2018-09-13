@@ -45,7 +45,7 @@ public class AgendaController {
 		return model;		
 	}
 	
-	@RequestMapping(value = "/edit", method = RequestMethod.GET)
+	/*@RequestMapping(value = "/edit", method = RequestMethod.GET)
 	public ModelAndView editEmpleado(HttpServletRequest request) {
 		logger.info("-- en EDIT");
 		int IdEmpleado = Integer.parseInt(request.getParameter("idEmpleado"));
@@ -53,15 +53,15 @@ public class AgendaController {
 		ModelAndView model = new ModelAndView("UserForm");
 		model.addObject("empleado", empleado);
 		return model;		
-	}
+	}*/
 	
-	@RequestMapping(value = "/delete", method = RequestMethod.GET)
+	/*@RequestMapping(value = "/delete", method = RequestMethod.GET)
 	public ModelAndView deleteEmpleado(HttpServletRequest request) {
 		logger.info("-- en DELETE");
 		int IdEmpleado = Integer.parseInt(request.getParameter("idEmpleado"));
 		empleadoService.delete(IdEmpleado);
 		return new ModelAndView("redirect:/");		
-	}
+	}*/
 	
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public ModelAndView saveEmpleado(@ModelAttribute Empleado empleado) {

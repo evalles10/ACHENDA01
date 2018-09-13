@@ -44,5 +44,10 @@ public class EmpleadosRepositoryImpl implements EmpleadoRepositoryCustom{
 		
 	}
 
+	public List<Empleado> getEmpleado(String empleado){
+		Query query = entityManager.createNativeQuery("SELECT * FROM empleados;");
+		return query.getResultList();
+		
+	}
 	 
 }

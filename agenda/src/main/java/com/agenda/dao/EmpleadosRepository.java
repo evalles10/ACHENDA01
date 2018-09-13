@@ -8,9 +8,10 @@ import org.springframework.stereotype.Repository;
 	@Repository
 	public interface EmpleadosRepository extends JpaRepository<Empleado, Integer>, EmpleadoRepositoryCustom {
 
-		Empleado findOne(int idEmpleados);
+		//Empleado findOne(int idEmpleados);
 
-		Empleado delete(int idempleados);
+		//Empleado delete(int idempleados);
 
+		
 	}
 
