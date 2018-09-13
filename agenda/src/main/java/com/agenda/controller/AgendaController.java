@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -41,6 +42,17 @@ public class AgendaController {
 		ModelAndView model = new ModelAndView("ListadoEmpleados");
 		model.addObject("empleado", new Empleado());
 		return model;		
+	}
+	
+	@GetMapping("/get")
+	public ModelAndView mostrarEmpleado(@RequestParam Integer idEmpleados)throws Exception {
+		logger.info("-- en ficha Empleado");
+		System.out.println("-- Pasando por mostrarEmpleado");
+		
+		
+		ModelAndView model = new ModelAndView("ListadoEmpleados");
+		model.addObject("empleado",empleadoService);
+		return model;
 	}
 	
 	/*@RequestMapping(value = "/edit", method = RequestMethod.GET)
