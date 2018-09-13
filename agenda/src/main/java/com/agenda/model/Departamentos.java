@@ -21,7 +21,7 @@ public class Departamentos implements Serializable{
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idDepartamento;
+	private Integer iddepartamento;
 	private String nombre;
 	
 	 
@@ -34,18 +34,18 @@ public class Departamentos implements Serializable{
 		super();
 	}
 
-	public Departamentos(Integer idDepartamento, String nombre) {
+	public Departamentos(Integer iddepartamento, String nombre) {
 		super();
-		this.idDepartamento = idDepartamento;
+		this.iddepartamento = iddepartamento;
 		this.nombre = nombre;
 	}
 
 	public Integer getIdDepartamento() {
-		return idDepartamento;
+		return iddepartamento;
 	}
 
-	public void setIdDepartamento(Integer idDepartamento) {
-		this.idDepartamento = idDepartamento;
+	public void setIdDepartamento(Integer iddepartamento) {
+		this.iddepartamento = iddepartamento;
 	}
 
 	public String getNombre() {
@@ -58,7 +58,7 @@ public class Departamentos implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Departamentos [idDepartamento=" + idDepartamento + ", nombre=" + nombre + "]";
+		return "Departamentos [iddepartamento=" + iddepartamento + ", nombre=" + nombre + "]";
 	}
 	
 	
