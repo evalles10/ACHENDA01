@@ -43,7 +43,7 @@ public class AgendaController {
 		model.addObject("empleado", new Empleado());
 		return model;		
 	}
-	
+	/*
 	@GetMapping("/get")
 	public ModelAndView mostrarEmpleado(@RequestParam Integer idEmpleados)throws Exception {
 		logger.info("-- en ficha Empleado");
@@ -53,7 +53,7 @@ public class AgendaController {
 		ModelAndView model = new ModelAndView("ListadoEmpleados");
 		model.addObject("empleado",empleadoService);
 		return model;
-	}
+	}*/
 	
 	/*@RequestMapping(value = "/edit", method = RequestMethod.GET)
 	public ModelAndView editEmpleado(HttpServletRequest request) {
