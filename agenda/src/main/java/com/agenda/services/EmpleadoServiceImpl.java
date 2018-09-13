@@ -19,11 +19,11 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 	public List<Empleado> list(){
 		return empleadoDAO.findAll();
 	}
-	/*@Override
+	@Override
 	public Empleado get(int idempleado){
-		return empleadoDAO.findOne(idempleado);
+		return empleadoDAO.findById(idempleado).get();
 		
-	}*/
+	}
 	@Override
 	public void update(Empleado empleado){
 		empleadoDAO.save(empleado);
@@ -33,10 +33,10 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 	public void add(Empleado empleado){
 	empleadoDAO.save(empleado);
 	}
-	/*
+	
 	@Override
 	public void delete(int idempleado){
-		empleadoDAO.delete(idempleado);
+		empleadoDAO.deleteById(idempleado);
 	}
-	*/
+	
 }
