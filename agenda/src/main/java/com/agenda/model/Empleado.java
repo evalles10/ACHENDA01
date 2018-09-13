@@ -22,9 +22,9 @@ public class Empleado implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idempleados;
-	private Integer codEmpleado;
+	private Integer codempleado;
 	private Integer salario;
-	private Timestamp fechaAlta;
+	private Timestamp fechaalta;
 
 	@OneToOne
 	@JoinColumn(name = "idempleados", referencedColumnName = "idEmpleado")
@@ -42,13 +42,13 @@ public class Empleado implements Serializable {
 		super();
 	}
 
-	public Empleado(Integer idempleados, Integer codEmpleado, Integer salario, Timestamp fechaAlta, Persona persona,
+	public Empleado(Integer idempleados, Integer codempleado, Integer salario, Timestamp fechaalta, Persona persona,
 			Categorias categoria, Departamentos departamento) {
 		super();
 		this.idempleados = idempleados;
-		this.codEmpleado = codEmpleado;
+		this.codempleado = codempleado;
 		this.salario = salario;
-		this.fechaAlta = fechaAlta;
+		this.fechaalta = fechaalta;
 		this.persona = persona;
 		this.categoria = categoria;
 		this.departamento = departamento;
@@ -67,11 +67,11 @@ public class Empleado implements Serializable {
 	}
 
 	public Integer getCodEmpleado() {
-		return codEmpleado;
+		return codempleado;
 	}
 
 	public void setCodEmpleado(Integer codEmpleado) {
-		this.codEmpleado = codEmpleado;
+		this.codempleado = codEmpleado;
 	}
 
 	public Integer getSalario() {
@@ -83,11 +83,11 @@ public class Empleado implements Serializable {
 	}
 
 	public Timestamp getFechaAlta() {
-		return fechaAlta;
+		return fechaalta;
 	}
 
 	public void setFechaAlta(Timestamp fechaAlta) {
-		this.fechaAlta = fechaAlta;
+		this.fechaalta = fechaAlta;
 	}
 
 	public Persona getPersona() {
@@ -119,8 +119,8 @@ public class Empleado implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Empleado [idempleados=" + idempleados + ", codEmpleado=" + codEmpleado + ", salario=" + salario
-				+ ", fechaAlta=" + fechaAlta + ", persona=" + persona + ", categoria=" + categoria + ", departamento="
+		return "Empleado [idempleados=" + idempleados + ", codEmpleado=" + codempleado + ", salario=" + salario
+				+ ", fechaAlta=" + fechaalta + ", persona=" + persona + ", categoria=" + categoria + ", departamento="
 				+ departamento + "]";
 	}
 

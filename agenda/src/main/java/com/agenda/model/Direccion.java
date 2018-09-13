@@ -22,7 +22,7 @@ public class Direccion implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer iddirecciones;
 	private String direccion;
-	private String codPostal;
+	private String codpostal;
 	private String localidad;
 	private String provincia;
 
@@ -34,11 +34,11 @@ public class Direccion implements Serializable {
 		super();
 	}
 
-	public Direccion(Integer iddirecciones, String direccion, String codPostal, String localidad, String provincia) {
+	public Direccion(Integer iddirecciones, String direccion, String codpostal, String localidad, String provincia) {
 		super();
 		this.iddirecciones = iddirecciones;
 		this.direccion = direccion;
-		this.codPostal = codPostal;
+		this.codpostal = codpostal;
 		this.localidad = localidad;
 		this.provincia = provincia;
 	}
@@ -60,11 +60,11 @@ public class Direccion implements Serializable {
 	}
 
 	public String getCodPostal() {
-		return codPostal;
+		return codpostal;
 	}
 
-	public void setCodPostal(String codPostal) {
-		this.codPostal = codPostal;
+	public void setCodPostal(String codpostal) {
+		this.codpostal = codpostal;
 	}
 
 	public String getLocalidad() {
@@ -85,7 +85,7 @@ public class Direccion implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Direccion [iddirecciones=" + iddirecciones + ", direccion=" + direccion + ", codPostal=" + codPostal
+		return "Direccion [iddirecciones=" + iddirecciones + ", direccion=" + direccion + ", codpostal=" + codpostal
 				+ ", localidad=" + localidad + ", provincia=" + provincia + "]";
 	}
 	

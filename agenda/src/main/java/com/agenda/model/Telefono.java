@@ -12,15 +12,15 @@ public class Telefono {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idTelefonos;
+	private Integer idtelefonos;
 	private String telefono;
 
 	public Integer getIdTelefonos() {
-		return idTelefonos;
+		return idtelefonos;
 	}
 
-	public void setIdTelefonos(Integer idTelefonos) {
-		this.idTelefonos = idTelefonos;
+	public void setIdTelefonos(Integer idtelefonos) {
+		this.idtelefonos = idtelefonos;
 	}
 
 	public String getTelefono() {

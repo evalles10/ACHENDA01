@@ -32,7 +32,7 @@ public class Persona implements Serializable {
 	private String apellido1;
 	private String apellido2;
 	private String dni;
-	private Date fechaNacimiento;
+	private Date fechanacimiento;
 
 	@OneToOne(mappedBy = "persona", cascade = CascadeType.ALL)
     private Empleado empleado;
@@ -49,14 +49,14 @@ public class Persona implements Serializable {
 	}
 
 	public Persona(Integer idpersonas, String nombre, String apellido1, String apellido2, String dni,
-			Date fechaNacimiento) {
+			Date fechanacimiento) {
 		super();
 		this.idpersonas = idpersonas;
 		this.nombre = nombre;
 		this.apellido1 = apellido1;
 		this.apellido2 = apellido2;
 		this.dni = dni;
-		this.fechaNacimiento = fechaNacimiento;
+		this.fechanacimiento = fechanacimiento;
 	}
 
 	public Empleado getEmpleado() {
@@ -116,17 +116,17 @@ public class Persona implements Serializable {
 	}
 
 	public Date getFechaNacimiento() {
-		return fechaNacimiento;
+		return fechanacimiento;
 	}
 
-	public void setFechaNacimiento(Date fechaNacimiento) {
-		this.fechaNacimiento = fechaNacimiento;
+	public void setFechaNacimiento(Date fechanacimiento) {
+		this.fechanacimiento = fechanacimiento;
 	}
 
 	@Override
 	public String toString() {
 		return "Persona [idpersonas=" + idpersonas + ", nombre=" + nombre + ", apellido1=" + apellido1 + ", apellido2="
-				+ apellido2 + ", dni=" + dni + ", fechaNacimiento=" + fechaNacimiento + "]";
+				+ apellido2 + ", dni=" + dni + ", fechanacimiento=" + fechanacimiento + "]";
 	}
 
 }

@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,10 +17,11 @@ import org.slf4j.LoggerFactory;
 
 import com.agenda.model.*;
 import com.agenda.services.*;
+import com.agenda.model.Empleado;
 
 @Controller
 public class AgendaController {
-//dalmaricon
+
 	@Autowired
 	private EmpleadoService empleadoService;
 	
@@ -36,13 +38,49 @@ public class AgendaController {
 		return model;
 	}
 	
-	@RequestMapping(value = "/new", method = RequestMethod.GET)
-	public ModelAndView newEmpleado() {
+	/*@PostMapping("/buscarPorNombre")
+	public ModelAndView findByName(@RequestParam String nombre) throws Exception {
 		logger.info("-- en NEW");
+		
+		
+		System.out.println("--------dentro findByName"+nombre);
+		
+		
 		ModelAndView model = new ModelAndView("ListadoEmpleados");
-		model.addObject("empleado", new Empleado());
+		
+		model.addObject("listaEmpleados", empleadoService.findByName(nombre));
+		
+		List<Empleado> listaEmpleados = empleadoService.findByName(nombre);
+		
+		
+		
+		System.out.println(listaEmpleados.toString());
+		
+		
+		
+		
 		return model;		
 	}
+	
+	@GetMapping("/mostrarEmpleado")
+	public ModelAndView mostrarEmpleado(@RequestParam Integer id) throws Exception{
+		logger.info("-- en ficha Empleado");
+		System.out.println("--Pasando por mostrarEmpleado");
+		
+		
+		
+		
+		
+		
+		ModelAndView model = new ModelAndView("fichaEmpleado");
+		model.addObject("empleado", empleadoService.findById(id));
+		
+		
+		
+		return model;		
+	}
+	*/
+	
 	/*
 	@GetMapping("/get")
 	public ModelAndView mostrarEmpleado(@RequestParam Integer idEmpleados)throws Exception {
