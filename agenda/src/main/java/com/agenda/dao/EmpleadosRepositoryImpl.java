@@ -29,7 +29,7 @@ public class EmpleadosRepositoryImpl implements EmpleadoRepositoryCustom{
 		return query.getResultList();
 		
 	}
-	
+	//me quiero morir dos veces
 	@Override
 	public List<Empleado> getIdPersonas(String empleado){
 		Query query = entityManager.createNativeQuery("SELECT idpersonas FROM personas ");
