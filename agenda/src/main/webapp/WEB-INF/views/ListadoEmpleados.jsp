@@ -40,34 +40,79 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</h1>
 			</div>
 			
-			<c:forEach var="empleado" items="${empleado}">
-			
-			<div class="w3ls-container   text-center">
-				<div class="w3l-content">
-					<div class="right-grid">
-						<p>In the mean time connect with us with the information below</p>
-						<div class="footer-grids">
-							<p>0926k 4th block building,king Avenue, </p>
-							<p class="my-2">New York City,USA</p>
-							<p class="phone"><span class="fa fa-phone"></span>phone: +0444 555 6789</p>
-							<p class="phone my-2"><span class="fa fa-fax"></span>Fax: +0444 555 6789</p>
-							<p class="phone"><span class="fa fa-envelope"></span>Mail:
-								<a href="mailto:info@example.com">info@example.com</a>
-							</p>
-						</div>
-						<div class="agileinfo-social-grids">
-							<ul>
-								<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-								<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-								<li><a href="#"><span class="fa fa-rss"></span></a></li>
-								<li><a href="#"><span class="fa fa-vk"></span></a></li>
-							</ul>
-						</div>
-					</div>
+			<main>
+
+		
+		<div id="cuerpo">
+		<div id="contenido" style="margin:25px">
+			<div class="container">
+	<h1>Listado de Empleados</h1><br/><br/>
+	</div>
+
+
+						<div class="container">
+			<table class="table">
+				<thead>
+					<tr>
+						
+						<th>NOMBRE</th>
+						<th>CODIGO EMPLEADO</th>
+						<th>DEPARTAMENTO</th>
+					
+					</tr>
+				</thead>
+				<tbody>
+				<!-- FOR EACH begin="1" end= "${ no }" step="1" varStatus="loopCounter"
+        value="${lstBooks}" var="book"-->
+				<c:forEach var="empleado" items="${listaempleados}">
+					<tr >
+						<td><a href="mostrarEmpleado?id=${empleado.idempleados}">
+							<c:out value="${empleado.personaid.nombre} ${empleado.personaid.apellido1} ${empleado.personaid.apellido2}"/>
+						</a></td>
+						<td><c:out value="${empleado.codempleado}"/></td>
+						<td><c:out value="${empleado.departamento.nombre}"/></td>
+						<td><form method = "post" action ="deleteEmpleado">
+							<input type="hidden" name = "id" value="${empleado.idempleados}"/>
+							<input  type="submit" value=" Eliminar "/></form></td>
+					</tr>
+							
+				</c:forEach>
+				</tbody>
+			</table>
+				<!-- row -->
+				<div class="row">
+				
 				</div>
+				<!-- /row -->
 			</div>
-			
-			</c:forEach>
+							<%
+								/*List categoria = new ArrayList<>();
+								categoria = Categoria.listarEmpleados();
+								
+								for (int i = 0; i < categoria.size(); i++) {
+									out.print("<div class=\"input-checkbox\">");
+									String a = String.valueOf(i + 1);
+									String f=categoria.get(i).toString();
+									if(f.equalsIgnoreCase("Programador")){
+									 f="Programador";
+									}
+									out.print("<a href=\"BuscarPorCategoria?buscarPorCategoria=" + f + "\" class=\"hiper\">");
+									out.print("<label for=\"category-" + a + "\">");
+									out.print("<span></span>");
+									out.print(categoria.get(i));
+									out.print("</label>");
+									out.print("</a>");
+									out.print("</div>");
+								}*/
+							%>
+</div>
+<br/><br/>
+<div id="listadoclientes" style="width:100%"></div>
+
+
+		</div> <!-- fin div contenido -->
+		<div class="clearfix"></div>
+		</main>
 			
 			<div class="footer">
 				<p> &copy; 2018 Company Coming soon . All Rights Reserved.Design by
