@@ -29,15 +29,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<link href="//fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 	<!-- /font files -->
 	<!-- css files -->
-	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-	<link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="resources/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="resources/css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- /css files -->
 	<body>
 		<div class="banner-layer">
 			<div class="logo text-center">
 				<h1>
 					
-						Our website is coming soon.
+						SOMOS LA PUTA HOSTIA
 				</h1>
 			</div>
 			<div class="w3ls-container   text-center">
