@@ -5,11 +5,14 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<%@page import="com.agenda.model.Empleado"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<!--  
+%@page import="com.agenda.model.Empleado"%>
+%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ page import="java.util.*"%>
-<%@ taglib prefix="c" uri ="http://java.sun.com/jsp/jstl/core" %>
+%@ page import="java.util.*"%>
+%@ taglib prefix="c" uri ="http://java.sun.com/jsp/jstl/core" %>
+
+-->
 <!DOCTYPE html>
 <html lang="es">
 
@@ -48,17 +51,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="w3ls-container   text-center">
                 <div class="w3l-content">
                 
-                <c:forEach var="empleado" items="${empleado}">
+                <!-- <c:forEach var="empleado" items="${empleado}"> -->
                 
                     <div class="right-grid">
-                        <p>${empleado.idempleados}</p>
+                        
                         <div class="footer-grids">
-                            <p>0926k 4th block building,king Avenue, </p>
-                            <p class="my-2">New York City,USA</p>
-                            <p class="phone"><span class="fa fa-phone"></span>phone: +0444 555 6789</p>
-                            <p class="phone my-2"><span class="fa fa-fax"></span>Fax: +0444 555 6789</p>
+                        <p>------------------------------------------</p>
+                        <p>NOMBRE: Luis Rodriguez Sanchez</p>
+                            <p>CODIGO DE EMPLEADO: A123 </p>
+                            <p>SALARIO: 18000 </p>
+                            <p>FECHA DE ALTA: 2014-12-11 </p>
+                            <p>DNI: 123 </p>
+                            <p>FECHA DE NACIMIENTO: 1975-12-25 </p>
+                            <p class="phone"><span class="fa fa-phone"></span>TELÉFONO: pendiente de agregar</p>
                             <p class="phone"><span class="fa fa-envelope"></span>Mail:
-                                <a href="mailto:info@example.com">info@example.com</a>
+                                <a href="mailto:info@example.com">pendiente de agregar</a>
                             </p>
                         </div>
                         <div class="agileinfo-social-grids">
@@ -69,8 +76,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <li><a href="#"><span class="fa fa-vk"></span></a></li>
                             </ul>
                         </div>
+                        <p>------------------------------------------</p>
                     </div>
-                </c:forEach>
+                <!-- </c:forEach> -->
                 </div>
             </div>
 			
