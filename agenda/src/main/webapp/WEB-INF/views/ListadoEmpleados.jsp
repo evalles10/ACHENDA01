@@ -5,9 +5,9 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-
-
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -35,51 +35,40 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<body>
 		<div class="banner-layer">
 			<div class="logo text-center">
-				<h1>
-					
-						SOMOS LA PUTA HOSTIA
+				<h1>		
+						ACHENDA
 				</h1>
 			</div>
+			
+			<c:forEach var="empleado" items="${empleado}">
+			
 			<div class="w3ls-container   text-center">
-
 				<div class="w3l-content">
-					<div class="left-grid">
-						<h2 class="text-w3layouts">Your Company Name</h2>
-					</div>
 					<div class="right-grid">
-						<p>
-In the mean time connect with us with the information below</p>
-				<div class="footer-grids">
-					<p>0926k 4th block building,king Avenue, </p>
-					<p class="my-2">New York City,USA</p>
-					<p class="phone"><span class="fa fa-phone"></span>phone: +0444 555 6789</p>
-					<p class="phone my-2"><span class="fa fa-fax"></span>Fax: +0444 555 6789</p>
-					<p class="phone"><span class="fa fa-envelope"></span>Mail:
-						<a href="mailto:info@example.com">info@example.com</a>
-					</p>
-				</div>
-				<div class="agileinfo-social-grids">
-					<ul>
-						<li><a href="#"><span class="fa fa-facebook"></span></a></li>
-						<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-						<li><a href="#"><span class="fa fa-rss"></span></a></li>
-						<li><a href="#"><span class="fa fa-vk"></span></a></li>
-					</ul>
-				</div>
-						<div class="sub-form">
-							<form action="#" method="post">
-								<input type="email" name="email" size="30" placeholder="Email">
-								<button class="btn1">
-									<span class="fa fa-paper-plane" aria-hidden="true"></span>
-								</button>
-							</form>
+						<p>In the mean time connect with us with the information below</p>
+						<div class="footer-grids">
+							<p>0926k 4th block building,king Avenue, </p>
+							<p class="my-2">New York City,USA</p>
+							<p class="phone"><span class="fa fa-phone"></span>phone: +0444 555 6789</p>
+							<p class="phone my-2"><span class="fa fa-fax"></span>Fax: +0444 555 6789</p>
+							<p class="phone"><span class="fa fa-envelope"></span>Mail:
+								<a href="mailto:info@example.com">info@example.com</a>
+							</p>
 						</div>
-						
+						<div class="agileinfo-social-grids">
+							<ul>
+								<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+								<li><a href="#"><span class="fa fa-twitter"></span></a></li>
+								<li><a href="#"><span class="fa fa-rss"></span></a></li>
+								<li><a href="#"><span class="fa fa-vk"></span></a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
-				
-
 			</div>
+			
+			</c:forEach>
+			
 			<div class="footer">
 				<p> &copy; 2018 Company Coming soon . All Rights Reserved.Design by
 					<a href="http://w3layouts.com" target="=_blank">W3layouts</a>
