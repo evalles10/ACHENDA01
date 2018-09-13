@@ -23,36 +23,19 @@ public class EmpleadosRepositoryImpl implements EmpleadoRepositoryCustom{
 
 	 @PersistenceContext
 	    EntityManager entityManager;
-	@Override
-	public List<Empleado> getCodEmpleado(String empleado){
-		Query query = entityManager.createNativeQuery("SELECT codEmpleado FROM empleados ");
-		return query.getResultList();
+		@Override
+		public List<Empleado> findByName(String name) {
+			Query query = entityManager
+			.createNativeQuery("SELECT * FROM personas, empleados, departamentos, categorias, direcciones, telefonos " + 
+								"WHERE personas.id_empleado=empleados.idempleados " + 
+								"AND empleados.id_departamento=departamentos.iddepartamento " +
+								"AND empleados.id_categoria=categorias.id_categorias " +
+								"AND personas.idpersonas=direcciones.id_persona " +
+								"AND personas.idpersonas=telefonos.id_persona " +
+								"AND personas.nombre like ? group by personas.nombre; ", Empleado.class);
+	     query.setParameter(1, name + "%");
+	     return query.getResultList();
+		}
 		
-	}
-	//me quiero morir dos veces
-	@Override
-	public List<Empleado> getIdPersonas(String empleado){
-		Query query = entityManager.createNativeQuery("SELECT idpersonas FROM personas ");
-		return query.getResultList();
-		
-	}
-
-	@Override
-	public List<Empleado> getIdEmpleado(String empleado){
-		Query query = entityManager.createNativeQuery("SELECT idempleado FROM empleados ");
-		return query.getResultList();
-		
-	}
-
-	public List<Empleado> getEmpleado(String empleado){
-		Query query = entityManager.createNativeQuery("SELECT * FROM empleados;");
-		return query.getResultList();
-		
-	}
-	@Override
-	public List<Empleado> findByName(String name) {
-		Query query = entityManager.createNativeQuery("SELECT ;");
-		return query.getResultList();
-	}
 	 
 }
