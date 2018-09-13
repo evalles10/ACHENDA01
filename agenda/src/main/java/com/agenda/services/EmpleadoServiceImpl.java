@@ -8,35 +8,41 @@ import com.agenda.model.Empleado;
 
 
 
+
 @Service
 @Transactional
 public class EmpleadoServiceImpl implements EmpleadoService {
 
 	@Autowired
 	private EmpleadosRepository empleadoDAO;
-	
+
 	@Override
 	public List<Empleado> list(){
 		return empleadoDAO.findAll();
 	}
-	@Override
-	public Empleado get(int idempleado){
-		return empleadoDAO.findById(idempleado).get();
-		
+
+	public Empleado findById(Integer id){
+		return empleadoDAO.findById(id).get();
 	}
+	
 	@Override
 	public void update(Empleado empleado){
 		empleadoDAO.save(empleado);
 	}
-	
+
 	@Override
 	public void add(Empleado empleado){
-	empleadoDAO.save(empleado);
+		empleadoDAO.save(empleado);
 	}
-	
+
 	@Override
 	public void delete(int idempleado){
 		empleadoDAO.deleteById(idempleado);
 	}
-	
+
+	@Override
+	public List<Empleado> findByName(String name) {
+		return empleadoDAO.findByName(name);
+	}
+
 }
