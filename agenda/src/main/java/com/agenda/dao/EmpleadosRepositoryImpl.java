@@ -49,5 +49,10 @@ public class EmpleadosRepositoryImpl implements EmpleadoRepositoryCustom{
 		return query.getResultList();
 		
 	}
+	@Override
+	public List<Empleado> findByName(String name) {
+		Query query = entityManager.createNativeQuery("SELECT ;");
+		return query.getResultList();
+	}
 	 
 }
