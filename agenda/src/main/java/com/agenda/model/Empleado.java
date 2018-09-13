@@ -22,7 +22,7 @@ public class Empleado implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idempleados;
-	private Integer codempleado;
+	private String codempleado;
 	private Integer salario;
 	private Timestamp fechaalta;
 
@@ -42,7 +42,7 @@ public class Empleado implements Serializable {
 		super();
 	}
 
-	public Empleado(Integer idempleados, Integer codempleado, Integer salario, Timestamp fechaalta, Persona persona,
+	public Empleado(Integer idempleados, String codempleado, Integer salario, Timestamp fechaalta, Persona persona,
 			Categorias categoria, Departamentos departamento) {
 		super();
 		this.idempleados = idempleados;
@@ -66,11 +66,11 @@ public class Empleado implements Serializable {
 		this.idempleados = idempleados;
 	}
 
-	public Integer getCodEmpleado() {
+	public String getCodEmpleado() {
 		return codempleado;
 	}
 
-	public void setCodEmpleado(Integer codEmpleado) {
+	public void setCodEmpleado(String codEmpleado) {
 		this.codempleado = codEmpleado;
 	}
 

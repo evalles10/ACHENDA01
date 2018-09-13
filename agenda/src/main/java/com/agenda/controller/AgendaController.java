@@ -26,7 +26,7 @@ public class AgendaController {
 	
 
 	@GetMapping("/")
-	public ModelAndView handleRequest() throws Exception {
+	public ModelAndView ListarEmpleados() throws Exception {
 		logger.info("--en ListadoController");
 		List<Empleado> listEmpleados = empleadoService.list();
 		logger.info("--- "+ listEmpleados);
@@ -108,13 +108,13 @@ public class AgendaController {
 		return new ModelAndView("redirect:/");		
 	}*/
 	
-	@RequestMapping(value = "/save", method = RequestMethod.POST)
+	/*@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public ModelAndView saveEmpleado(@ModelAttribute Empleado empleado) {
 		logger.info("-- en SAVE");
 		empleadoService.add(empleado);
 		return new ModelAndView("redirect:/");
 	}
-	
+	*/
 	
 	
 	

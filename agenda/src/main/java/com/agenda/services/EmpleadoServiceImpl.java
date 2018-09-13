@@ -16,7 +16,6 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 	@Autowired
 	private EmpleadosRepository empleadoDAO;
 
-	@Override
 	public List<Empleado> list(){
 		return empleadoDAO.findAll();
 	}
@@ -25,24 +24,22 @@ public class EmpleadoServiceImpl implements EmpleadoService {
 		return empleadoDAO.findById(id).get();
 	}
 	
-	@Override
-	public void update(Empleado empleado){
-		empleadoDAO.save(empleado);
-	}
-
-	@Override
-	public void add(Empleado empleado){
-		empleadoDAO.save(empleado);
-	}
-
-	@Override
-	public void delete(int idempleado){
-		empleadoDAO.deleteById(idempleado);
-	}
 
 	@Override
 	public List<Empleado> findByName(String name) {
 		return empleadoDAO.findByName(name);
+	}
+
+	@Override
+	public void saveEmpleado(Empleado empleado) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean deleteEmpleado(Empleado empleado) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }
