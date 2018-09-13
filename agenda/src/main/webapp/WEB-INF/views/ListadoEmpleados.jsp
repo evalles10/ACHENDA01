@@ -49,12 +49,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			
 			
             <div class="w3ls-container   text-center">
-                <div class="w3l-content">
                 
                 <!-- <c:forEach var="empleado" items="${empleado}"> -->
-                
-                    <div class="right-grid">
-                        
+    
                         <div class="footer-grids">
                         <p>------------------------------------------</p>
                         <p>NOMBRE: Luis Rodriguez Sanchez</p>
@@ -77,7 +74,56 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ul>
                         </div>
                         <p>------------------------------------------</p>
-                    </div>
+                        
+                        
+                        <div class="footer-grids">
+                        <p>------------------------------------------</p>
+                        <p>NOMBRE: Manuel Sánchez Ferlosio</p>
+                            <p>CODIGO DE EMPLEADO: A126 </p>
+                            <p>SALARIO: 20000 </p>
+                            <p>FECHA DE ALTA: 2013-11-25 </p>
+                            <p>DNI: 4564 </p>
+                            <p>FECHA DE NACIMIENTO: 1980-11-10 </p>
+                            <p class="phone"><span class="fa fa-phone"></span>TELÉFONO: pendiente de agregar</p>
+                            <p class="phone"><span class="fa fa-envelope"></span>Mail:
+                                <a href="mailto:info@example.com">pendiente de agregar</a>
+                            </p>
+                        </div>
+                        <div class="agileinfo-social-grids">
+                            <ul>
+                                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                <li><a href="#"><span class="fa fa-rss"></span></a></li>
+                                <li><a href="#"><span class="fa fa-vk"></span></a></li>
+                            </ul>
+                        </div>
+                        <p>------------------------------------------</p>
+                               
+                        
+                        <div class="footer-grids">
+                        <p>------------------------------------------</p>
+                        <p>NOMBRE: Antonio Herranz Pérez</p>
+                            <p>CODIGO DE EMPLEADO: A240 </p>
+                            <p>SALARIO: 40000 </p>
+                            <p>FECHA DE ALTA: 2012-08-10 </p>
+                            <p>DNI: 789 </p>
+                            <p>FECHA DE NACIMIENTO: 1970-09-01 </p>
+                            <p class="phone"><span class="fa fa-phone"></span>TELÉFONO: pendiente de agregar</p>
+                            <p class="phone"><span class="fa fa-envelope"></span>Mail:
+                                <a href="mailto:info@example.com">pendiente de agregar</a>
+                            </p>
+                        </div>
+                        <div class="agileinfo-social-grids">
+                            <ul>
+                                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                <li><a href="#"><span class="fa fa-rss"></span></a></li>
+                                <li><a href="#"><span class="fa fa-vk"></span></a></li>
+                            </ul>
+                        </div>
+                        <p>------------------------------------------</p>
+                        
+                    
                 <!-- </c:forEach> -->
                 </div>
             </div>
